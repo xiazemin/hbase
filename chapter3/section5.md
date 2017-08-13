@@ -14,11 +14,7 @@ HBaseAdmin是一个类表示管理。这个类属于org.apache.hadoop.hbase.clie
 
 ## Descriptor类
 
-
-
 这个类包含一个HBase表，如详细信息：
-
-
 
 所有列族的描述，
 
@@ -32,5 +28,21 @@ HBaseAdmin是一个类表示管理。这个类属于org.apache.hadoop.hbase.clie
 
 与之相关联的协同处理器等
 
+### 构造函数
+
+| S.No. | 构造函数和总结 |
+| :--- | :--- |
+| 1 | **HTableDescriptor\(TableName name\)**构造一个表描述符指定TableName对象。 |
+
+### 方法及说明
+
+| S.No. | 方法及描述 |
+| :--- | :--- |
+| 1 | **HTableDescriptor addFamily\(HColumnDescriptor family\)**将列家族给定的描述符 |
+
+  
+
+
+  
 
 
