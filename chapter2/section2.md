@@ -62,7 +62,7 @@ hadoop是2.6.1 hbase是1.1.2
 
 \)环境变量：
 
-export JAVA\_HOME=/usr/soft/jdk1.7.0\_79 
+export JAVA\_HOME=/usr/soft/jdk1.7.0\_79
 
 export HBASE\_CLASSPATH=/home/lin/hadoop/hadoop-2.6.1/etc/hadoop
 
@@ -72,31 +72,29 @@ hbase.rootdir 要配置为hdfs上的路径；打开分布
 
 &lt;configuration&gt;
 
-    &lt;property&gt;
+```
+&lt;property&gt;
 
-		&lt;name&gt;hbase.rootdir&lt;/name&gt;
+    &lt;name&gt;hbase.rootdir&lt;/name&gt;
 
-		&lt;value&gt;file:///home/lin/hadoop/hbase-1.1.2/data&lt;/value&gt;
+    &lt;value&gt;file:///home/lin/hadoop/hbase-1.1.2/data&lt;/value&gt;
 
-	&lt;/property&gt;
+&lt;/property&gt;
 
-	&lt;property&gt;
+&lt;property&gt;
 
-		&lt;name&gt;hbase.cluster.distributed&lt;/name&gt;
+    &lt;name&gt;hbase.cluster.distributed&lt;/name&gt;
 
-		&lt;value&gt;true&lt;/value&gt;
+    &lt;value&gt;true&lt;/value&gt;
 
-	&lt;/property&gt;
+&lt;/property&gt;
+```
 
 &lt;/configuration&gt;
 
-
-
 \(3\)、启动hbase
 
-```
-
-```
+$ bin/start-hbase.sh
 
 jps 查看后出现下面的进程证明启动成功，可以看到比单机模式多了两个进程；
 
