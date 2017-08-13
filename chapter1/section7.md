@@ -61,7 +61,7 @@ $ vi conf/hbase-site.xml
 ```
 &lt;name&gt;hbase.zookeeper.property.dataDir&lt;/name&gt;
 
-&lt;value&gt;/Users/didi/zookeeper&lt;/value&gt;
+&lt;value&gt;/Users/didi/zookeeper/server1/data&lt;/value&gt;
 ```
 
 &lt;/property&gt;
@@ -73,8 +73,4 @@ $ vi conf/hbase-site.xml
 $vi /Users/didi/zookeeper/server1/zookeeper-3.4.6/conf/zoo.cfg
 
 dataDir=/Users/didi/zookeeper/server1/data
-
-
-
-
 
