@@ -2,43 +2,23 @@
 
 HBase Shell
 
-
-
 HBase包含可以与HBase进行通信的Shell。 HBase使用Hadoop文件系统来存储数据。它拥有一个主服务器和区域服务器。数据存储将在区域\(表\)的形式。这些区域被分割并存储在区域服务器。
-
-
 
 主服务器管理这些区域服务器，所有这些任务发生在HDFS。下面给出的是一些由HBase Shell支持的命令。
 
-
-
 通用命令
-
-
 
 status: 提供HBase的状态，例如，服务器的数量。
 
-
-
 version: 提供正在使用HBase版本。
-
-
 
 table\_help: 表引用命令提供帮助。
 
-
-
 whoami: 提供有关用户的信息。
-
-
 
 数据定义语言
 
-
-
 这些是关于HBase在表中操作的命令。
-
-
 
 create: 创建一个表。
 
@@ -66,8 +46,6 @@ Java Admin API: 在此之前所有的上述命令，Java提供了一个通过API
 
 数据操纵语言
 
-
-
 put: 把指定列在指定的行中单元格的值在一个特定的表。
 
 get: 取行或单元格的内容。
@@ -86,11 +64,7 @@ Java client API: 在此之前所有上述命令，Java提供了一个客户端AP
 
 启动 HBase Shell
 
-
-
 要访问HBase shell，必须导航进入到HBase的主文件夹。
-
-
 
 cd /usr/localhost/
 
@@ -98,13 +72,9 @@ cd Hbase
 
 可以使用“hbase shell”命令来启动HBase的交互shell，如下图所示。
 
-
-
 ./bin/hbase shell
 
 如果已成功在系统中安装HBase，那么它会给出 HBase shell 提示符，如下图所示。
-
-
 
 HBase Shell; enter 'help&lt;RETURN&gt;' for list of supported commands.
 
@@ -114,11 +84,11 @@ Version 0.94.23, rf42302b28aceaab773b15f234aa8718fff7eea3c, Wed Aug 27
 
 00:54:09 UTC 2014
 
-
-
 hbase\(main\):001:0&gt;
 
 要退出交互shell命令，在任何时候键入 exit 或使用&lt;Ctrl + C&gt;。进一步处理检查shell功能之前，使用 list 命令用于列出所有可用命令。list是用来获取所有HBase 表的列表。首先，验证安装HBase在系统中使用如下所示。
 
+hbase\(main\):001:0&gt; list
 
+TABLE
 
