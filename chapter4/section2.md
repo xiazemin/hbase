@@ -1,4 +1,4 @@
-# section2
+# api  创建表
 
 错误：
 
@@ -33,8 +33,6 @@ emp
 emp\_j
 
 2 row\(s\) in 0.0060 seconds
-
-
 
 =&gt; \["emp", "emp\_j"\]
 
