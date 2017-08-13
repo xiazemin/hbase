@@ -74,3 +74,11 @@ $vi /Users/didi/zookeeper/server1/zookeeper-3.4.6/conf/zoo.cfg
 
 dataDir=/Users/didi/zookeeper/server1/data
 
+$ ./bin/start-hbase.sh
+
+starting master, logging to /Users/didi/hbase/hbase/bin/../logs/hbase-didi-master-192.168.0.103.out
+
+Java HotSpot\(TM\) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+
+Java HotSpot\(TM\) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+
