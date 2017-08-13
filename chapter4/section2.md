@@ -10,8 +10,6 @@ at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithRetries\(RpcRetrying
 
 添加
 
-
-
 con.set\("hbase.zookeeper.quorum", "localhost"\);
 
 con.set\("hbase.zookeeper.property.clientPort", "2183"\);
@@ -25,4 +23,18 @@ Configuration: core-default.xml, core-site.xml, mapred-default.xml, mapred-site.
 org.apache.hadoop.hbase.client.HBaseAdmin@6a192cfe
 
 Table created
+
+hbase\(main\):012:0\* list
+
+TABLE
+
+emp
+
+emp\_j
+
+2 row\(s\) in 0.0060 seconds
+
+
+
+=&gt; \["emp", "emp\_j"\]
 
