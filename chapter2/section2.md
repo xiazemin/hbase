@@ -102,8 +102,6 @@ jps 查看后出现下面的进程证明启动成功，可以看到比单机模�
 
 然后就可以进入shell进行对hbase的操作。
 
-![](file:///D:/Documents/我的文档/My Knowledge/temp/f65d8d0e-53b6-4946-83ce-067ca7dc8f4e_128_files/4207a1bb-5574-4c66-bf9b-36325bcdac6a.png)
-
 访问web 根据自己的IP访问
 
 [http://192.168.0.166:16010/master-status](http://192.168.0.166:16010/master-status)
@@ -138,19 +136,59 @@ hosts
 
 \)环境变量：
 
-```
+export JAVA\_HOME=/usr/soft/jdk1.7.0\_79 
 
-```
+export HBASE\_CLASSPATH=/home/lin/hadoop/hadoop-2.6.1/etc/hadoop
+
+export HADOOP\_HOME=/home/lin/hadoop/hadoop-2.6.1
 
 \(2\)、编辑hbase-site.xml
 
 hbase.rootdir 要配置为hdfs上的路径；打开分布
 
-```
-<
-configuration
->
-```
+&lt;configuration&gt;
+
+    &lt;property&gt;
+
+		&lt;name&gt;hbase.rootdir&lt;/name&gt;
+
+		&lt;value&gt;file:///home/lin/hadoop/hbase-1.1.2/data&lt;/value&gt;
+
+	&lt;/property&gt;
+
+	&lt;property&gt;
+
+		&lt;name&gt;hbase.cluster.distributed&lt;/name&gt;
+
+		&lt;value&gt;true&lt;/value&gt;
+
+	&lt;/property&gt;
+
+        &lt;property&gt;
+
+	   &lt;name&gt;hbase.master&lt;/name&gt;
+
+	   &lt;value&gt;hdfs://lin162:60000&lt;/value&gt;
+
+	&lt;/property&gt;
+
+	&lt;property&gt;
+
+		&lt;name&gt;hbase.zookeeper.property.clientPort&lt;/name&gt;
+
+		&lt;value&gt;2181&lt;/value&gt;
+
+	&lt;/property&gt;
+
+	&lt;property&gt;
+
+		&lt;name&gt;hbase.zookeeper.quorum&lt;/name&gt;
+
+		&lt;value&gt;lin162,lin163,lin164&lt;/value&gt;
+
+	&lt;/property&gt;
+
+&lt;/configuration&gt;
 
 \(3\)、配置regionservers 添加slave
 
