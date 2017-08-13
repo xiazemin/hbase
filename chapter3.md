@@ -94,21 +94,25 @@ $ vi conf/hbase-site.xml
 
 &lt;property&gt;
 
-    &lt;name&gt;hbase.rootdir&lt;/name&gt;
+```
+&lt;name&gt;hbase.rootdir&lt;/name&gt;
 
-    &lt;value&gt;hdfs://localhost:8020/hbase&lt;/value&gt;
+&lt;value&gt;hdfs://localhost:8020/hbase&lt;/value&gt;
+```
 
-  &lt;/property&gt;
+&lt;/property&gt;
 
 替换为
 
+&lt;property&gt;
 
+```
+&lt;name&gt;hbase.rootdir&lt;/name&gt;
 
- &lt;property&gt;
+&lt;value&gt;hdfs://master:8020/hbase&lt;/value&gt;
+```
 
-    &lt;name&gt;hbase.rootdir&lt;/name&gt;
+&lt;/property&gt;
 
-    &lt;value&gt;hdfs://master:8020/hbase&lt;/value&gt;
-
-  &lt;/property&gt;
+2017-08-13 12:25:52,574 WARN  \[main\] zookeeper.ZKUtil: hconnection-0x533116810x0, quorum=localost:2183, baseZNode=/hbase Unable to set watcher on znode \(/hbase/hbaseid\)
 
