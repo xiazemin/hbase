@@ -18,21 +18,15 @@ Region定位流程：
 
 ZooKeeper--&gt; -ROOT-\(单Region\)--&gt; .META.--&gt; 用户表
 
-
-
 -ROOT-
 
 表包含.META.表所在的region列表，该表只会有一个Region；
 
 Zookeeper中记录了-ROOT-表的location。
 
-
-
 .META.
 
 表包含所有的用户空间region列表，以及RegionServer的服务器地址。
-
-
 
 Hbase使用场景
 
@@ -48,19 +42,11 @@ for structured and semi-structured data
 
 don't need fullRDMS capabilities\(cross row/cross table transaction, joins,etc.\)
 
-
-
 大数据量存储，大数据量高并发操作
-
-
 
 需要对数据随机读写操作
 
-
-
 读写访问均是非常简单的操作
-
-
 
 Hbase与HDFS对比
 
@@ -73,4 +59,6 @@ HDFS适合批处理场景
 不适合增量数据处理
 
 不支持数据更新
+
+![](/assets/importhdd.png)
 
