@@ -124,3 +124,13 @@ $ ./bin/zkServer.sh  stop
 
 2017-08-13 12:31:51,927 WARN  \[main\] zookeeper.ZKUtil: hconnection-0x533116810x0, quorum=localost:2183, baseZNode=/hbase Unable to set watcher on znode \(/hbase/hbaseid\)
 
+$ vi conf/hbase-site.xml  将localhost换成master
+
+  &lt;property&gt;
+
+    &lt;name&gt;hbase.zookeeper.quorum&lt;/name&gt;
+
+    &lt;value&gt;master&lt;/value&gt;
+
+  &lt;/property&gt;
+
