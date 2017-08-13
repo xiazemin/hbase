@@ -30,13 +30,9 @@ $ ./bin/hbase shell
 
 HBase的Web界面
 
-
-
 要访问 HBase 的 Web界面，在浏览器中键入以下URL
 
-
-
-http://localhost:60010
+[http://localhost:60010](http://localhost:60010)
 
 以下界面列出了当前正在运行的区域服务器，备份主服务以及HBase表。
 
@@ -44,9 +40,11 @@ vi  ~/.bashrc
 
 为HBase库设置类路径（HBase的lib文件夹），如下图所示。
 
-
-
 export CLASSPATH=$CLASSPATH://home/hadoop/hbase/lib/\*
 
 这是为了防止“未找到类（class not found）”异常，同时使用Java API访问HBase。
+
+$vi ~/.bashrc
+
+export CLASSPATH=$CLASSPATH:$HBASE\_HOME/lib/\*
 
