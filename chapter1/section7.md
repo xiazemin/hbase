@@ -4,13 +4,59 @@ axel  -n 20 [http://apache.fayea.com/hbase/1.1.11/hbase-1.1.11-bin.tar.gz](http:
 
 $ ls
 
-CHANGES.txt	LICENSE.txt	README.txt	conf		hbase-webapps
+CHANGES.txt    LICENSE.txt    README.txt    conf        hbase-webapps
 
-LEGAL		NOTICE.txt	bin		docs		lib
+LEGAL        NOTICE.txt    bin        docs        lib
 
 $ vi .bashrc
 
 export HBASE\_HOME=/Users/didi/hbase/hbase
 
 export PATH=$HBASE\_HOME/bin:$PATH
+
+$ echo $JAVA\_HOME
+
+/Library/Java/JavaVirtualMachines/jdk1.8.0\_144.jdk/Contents/Home/
+
+$    vi conf/hbase-env.sh
+
+export JAVA\_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0\_144.jdk/Contents/Home/
+
+$ vi conf/hbase-site.xml
+
+&lt;configuration&gt;
+
+ &lt;property&gt;
+
+    &lt;name&gt;hbase.rootdir&lt;/name&gt;
+
+    &lt;value&gt;hdfs://master:8020/hbase&lt;/value&gt;
+
+  &lt;/property&gt;
+
+  &lt;property&gt;
+
+    &lt;name&gt;hbase.cluster.distributed&lt;/name&gt;
+
+    &lt;value&gt;false&lt;/value&gt;
+
+  &lt;/property&gt;
+
+  &lt;property&gt;
+
+    &lt;name&gt;hbase.zookeeper.quorum&lt;/name&gt;
+
+    &lt;value&gt;master,slave&lt;/value&gt;
+
+  &lt;/property&gt;
+
+  &lt;property&gt;
+
+    &lt;name&gt;hbase.zookeeper.property.dataDir&lt;/name&gt;
+
+    &lt;value&gt;/Users/didi/zookeeper&lt;/value&gt;
+
+  &lt;/property&gt;
+
+&lt;/configuration&gt;
 
