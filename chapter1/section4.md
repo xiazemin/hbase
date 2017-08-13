@@ -36,39 +36,31 @@ HBase是一个面向列的数据库，在表中它由行排序。表模式定义
 
 ## HBase的特点
 
-## 
 
-## HBase线性可扩展。
 
-## 它具有自动故障支持。
+HBase线性可扩展。
 
-## 它提供了一致的读取和写入。
+它具有自动故障支持。
 
-## 它集成了Hadoop，作为源和目的地。
+它提供了一致的读取和写入。
 
-## 客户端方便的Java API。
+它集成了Hadoop，作为源和目的地。
 
-## 它提供了跨集群数据复制。
+客户端方便的Java API。
 
-## 在哪里可以使用HBase？
+它提供了跨集群数据复制。
 
-## 
+在哪里可以使用HBase？
 
-## Apache HBase曾经是随机，实时的读/写访问大数据。
 
-## 它承载在集群普通硬件的顶端是非常大的表。
 
-## Apache HBase是此前谷歌Bigtable模拟非关系型数据库。 Bigtable对谷歌文件系统操作，同样类似Apache HBase工作在Hadoop HDFS的顶部。
+Apache HBase曾经是随机，实时的读/写访问大数据。
 
-## HBase的应用
+它承载在集群普通硬件的顶端是非常大的表。
 
-## 
+Apache HBase是此前谷歌Bigtable模拟非关系型数据库。 Bigtable对谷歌文件系统操作，同样类似Apache HBase工作在Hadoop HDFS的顶部。
 
-## 它是用来当有需要写重的应用程序。
 
-## HBase使用于当我们需要提供快速随机访问的数据。
-
-## 很多公司，如Facebook，Twitter，雅虎，和Adobe内部都在使用HBase。
 
 
 
