@@ -136,7 +136,7 @@ hosts
 
 \)环境变量：
 
-export JAVA\_HOME=/usr/soft/jdk1.7.0\_79 
+export JAVA\_HOME=/usr/soft/jdk1.7.0\_79
 
 export HBASE\_CLASSPATH=/home/lin/hadoop/hadoop-2.6.1/etc/hadoop
 
@@ -148,53 +148,55 @@ hbase.rootdir 要配置为hdfs上的路径；打开分布
 
 &lt;configuration&gt;
 
+```
+&lt;property&gt;
+
+    &lt;name&gt;hbase.rootdir&lt;/name&gt;
+
+    &lt;value&gt;file:///home/lin/hadoop/hbase-1.1.2/data&lt;/value&gt;
+
+&lt;/property&gt;
+
+&lt;property&gt;
+
+    &lt;name&gt;hbase.cluster.distributed&lt;/name&gt;
+
+    &lt;value&gt;true&lt;/value&gt;
+
+&lt;/property&gt;
+
     &lt;property&gt;
 
-		&lt;name&gt;hbase.rootdir&lt;/name&gt;
+   &lt;name&gt;hbase.master&lt;/name&gt;
 
-		&lt;value&gt;file:///home/lin/hadoop/hbase-1.1.2/data&lt;/value&gt;
+   &lt;value&gt;hdfs://lin162:60000&lt;/value&gt;
 
-	&lt;/property&gt;
+&lt;/property&gt;
 
-	&lt;property&gt;
+&lt;property&gt;
 
-		&lt;name&gt;hbase.cluster.distributed&lt;/name&gt;
+    &lt;name&gt;hbase.zookeeper.property.clientPort&lt;/name&gt;
 
-		&lt;value&gt;true&lt;/value&gt;
+    &lt;value&gt;2181&lt;/value&gt;
 
-	&lt;/property&gt;
+&lt;/property&gt;
 
-        &lt;property&gt;
+&lt;property&gt;
 
-	   &lt;name&gt;hbase.master&lt;/name&gt;
+    &lt;name&gt;hbase.zookeeper.quorum&lt;/name&gt;
 
-	   &lt;value&gt;hdfs://lin162:60000&lt;/value&gt;
+    &lt;value&gt;lin162,lin163,lin164&lt;/value&gt;
 
-	&lt;/property&gt;
-
-	&lt;property&gt;
-
-		&lt;name&gt;hbase.zookeeper.property.clientPort&lt;/name&gt;
-
-		&lt;value&gt;2181&lt;/value&gt;
-
-	&lt;/property&gt;
-
-	&lt;property&gt;
-
-		&lt;name&gt;hbase.zookeeper.quorum&lt;/name&gt;
-
-		&lt;value&gt;lin162,lin163,lin164&lt;/value&gt;
-
-	&lt;/property&gt;
+&lt;/property&gt;
+```
 
 &lt;/configuration&gt;
 
 \(3\)、配置regionservers 添加slave
 
-```
+lin163
 
-```
+lin164
 
 \(4\)、把hbase scp到lin163 和 lin164
 
@@ -220,13 +222,9 @@ bin/start-hbase.sh
 
 ![](http://img.blog.csdn.net/20151028104051400?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
-![](file:///D:/Documents/我的文档/My Knowledge/temp/18259326-abfc-4825-b9ca-b3e8868dedc3.png)
-
 在slave lin163 和 164 jps 出现  HregionServer 和 HquorumPeer
 
 ![](http://img.blog.csdn.net/20151028104100964?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
-
-![](file:///D:/Documents/我的文档/My Knowledge/temp/17136c0a-f115-4ecf-b2a7-611b47fb179d.png)
 
 然后就可以hbase shell  进入shell进行对hbase的操作。
 
