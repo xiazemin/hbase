@@ -126,11 +126,17 @@ $ ./bin/zkServer.sh  stop
 
 $ vi conf/hbase-site.xml  将localhost换成master
 
-  &lt;property&gt;
+&lt;property&gt;
 
-    &lt;name&gt;hbase.zookeeper.quorum&lt;/name&gt;
+```
+&lt;name&gt;hbase.zookeeper.quorum&lt;/name&gt;
 
-    &lt;value&gt;master&lt;/value&gt;
+&lt;value&gt;master&lt;/value&gt;
+```
 
-  &lt;/property&gt;
+&lt;/property&gt;
+
+2017-08-13 12:39:54,422 ERROR \[main\] zookeeper.RecoverableZooKeeper: ZooKeeper exists failed after 4 attempts
+
+2017-08-13 12:39:54,423 WARN  \[main\] zookeeper.ZKUtil: hconnection-0x533116810x0, quorum=master:2183, baseZNode=/hbase Unable to set watcher on znode \(/hbase/hbaseid\)
 
