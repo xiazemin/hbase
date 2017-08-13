@@ -26,37 +26,55 @@ $ vi conf/hbase-site.xml
 
 &lt;configuration&gt;
 
- &lt;property&gt;
+&lt;property&gt;
 
-    &lt;name&gt;hbase.rootdir&lt;/name&gt;
+```
+&lt;name&gt;hbase.rootdir&lt;/name&gt;
 
-    &lt;value&gt;hdfs://master:8020/hbase&lt;/value&gt;
+&lt;value&gt;hdfs://master:8020/hbase&lt;/value&gt;
+```
 
-  &lt;/property&gt;
+&lt;/property&gt;
 
-  &lt;property&gt;
+&lt;property&gt;
 
-    &lt;name&gt;hbase.cluster.distributed&lt;/name&gt;
+```
+&lt;name&gt;hbase.cluster.distributed&lt;/name&gt;
 
-    &lt;value&gt;false&lt;/value&gt;
+&lt;value&gt;false&lt;/value&gt;
+```
 
-  &lt;/property&gt;
+&lt;/property&gt;
 
-  &lt;property&gt;
+&lt;property&gt;
 
-    &lt;name&gt;hbase.zookeeper.quorum&lt;/name&gt;
+```
+&lt;name&gt;hbase.zookeeper.quorum&lt;/name&gt;
 
-    &lt;value&gt;master,slave&lt;/value&gt;
+&lt;value&gt;master,slave&lt;/value&gt;
+```
 
-  &lt;/property&gt;
+&lt;/property&gt;
 
-  &lt;property&gt;
+&lt;property&gt;
 
-    &lt;name&gt;hbase.zookeeper.property.dataDir&lt;/name&gt;
+```
+&lt;name&gt;hbase.zookeeper.property.dataDir&lt;/name&gt;
 
-    &lt;value&gt;/Users/didi/zookeeper&lt;/value&gt;
+&lt;value&gt;/Users/didi/zookeeper&lt;/value&gt;
+```
 
-  &lt;/property&gt;
+&lt;/property&gt;
 
 &lt;/configuration&gt;
+
+查看zookeeper配置
+
+$vi /Users/didi/zookeeper/server1/zookeeper-3.4.6/conf/zoo.cfg
+
+dataDir=/Users/didi/zookeeper/server1/data
+
+
+
+
 
