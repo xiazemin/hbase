@@ -16,7 +16,7 @@ hbase 下载地址：
 
 添加java环境变量：
 
-export JAVA\_HOME=/usr/soft/jdk1.7.0\_79 
+export JAVA\_HOME=/usr/soft/jdk1.7.0\_79
 
 \(2\)、编辑[hbase](http://lib.csdn.net/base/hbase)-site.xml
 
@@ -24,13 +24,15 @@ export JAVA\_HOME=/usr/soft/jdk1.7.0\_79
 
 &lt;configuration&gt;
 
-    &lt;property&gt;
+```
+&lt;property&gt;
 
-		&lt;name&gt;hbase.rootdir&lt;/name&gt;
+    &lt;name&gt;hbase.rootdir&lt;/name&gt;
 
-		&lt;value&gt;file:///home/lin/hadoop/hbase-1.1.2/data&lt;/value&gt;
+    &lt;value&gt;file:///home/lin/hadoop/hbase-1.1.2/data&lt;/value&gt;
 
-	&lt;/property&gt;
+&lt;/property&gt;
+```
 
 &lt;/configuration&gt;
 
@@ -60,19 +62,35 @@ hadoop是2.6.1 hbase是1.1.2
 
 \)环境变量：
 
-```
+export JAVA\_HOME=/usr/soft/jdk1.7.0\_79 
 
-```
+export HBASE\_CLASSPATH=/home/lin/hadoop/hadoop-2.6.1/etc/hadoop
 
 \(2\)、编辑hbase-site.xml
 
 hbase.rootdir 要配置为hdfs上的路径；打开分布
 
-```
-<
-configuration
->
-```
+&lt;configuration&gt;
+
+    &lt;property&gt;
+
+		&lt;name&gt;hbase.rootdir&lt;/name&gt;
+
+		&lt;value&gt;file:///home/lin/hadoop/hbase-1.1.2/data&lt;/value&gt;
+
+	&lt;/property&gt;
+
+	&lt;property&gt;
+
+		&lt;name&gt;hbase.cluster.distributed&lt;/name&gt;
+
+		&lt;value&gt;true&lt;/value&gt;
+
+	&lt;/property&gt;
+
+&lt;/configuration&gt;
+
+
 
 \(3\)、启动hbase
 
