@@ -30,3 +30,11 @@ HBase 为每个值维护了多级索引，即：&lt;key, column family, column n
 
 4、Region是Hbase中分布式存储和负载均衡的最小单元，不同Region分布到不同RegionServer上。
 
+![](/assets/importrg.png)
+
+5、Region虽然是分布式存储的最小单元，但并不是存储的最小单元。Region由一个或者多个Store组成，每个store保存一个columns family；每个Strore又由一个memStore和0至多个StoreFile组成，StoreFile包含HFile；memStore存储在内存中，StoreFile存储在HDFS上。
+
+![](/assets/importms.png)
+
+
+
