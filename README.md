@@ -1,8 +1,6 @@
-# Hbase原理、基本概念、基本架构
+# Hbase基本架构
 
 ![](/assets/importhb.png)
-
-
 
 HBase是一个构建在HDFS上的分布式列存储系统；
 
