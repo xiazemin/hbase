@@ -116,3 +116,7 @@ $ vi conf/hbase-site.xml
 
 2017-08-13 12:25:52,574 WARN  \[main\] zookeeper.ZKUtil: hconnection-0x533116810x0, quorum=localost:2183, baseZNode=/hbase Unable to set watcher on znode \(/hbase/hbaseid\)
 
+Could not start ZK at requested port of 2183.  ZK was started at port: 2184.  Aborting as clients \(e.g. shell\) will not be able to find this ZK quorum.
+
+
+
