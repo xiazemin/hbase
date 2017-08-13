@@ -118,5 +118,9 @@ $ vi conf/hbase-site.xml
 
 Could not start ZK at requested port of 2183.  ZK was started at port: 2184.  Aborting as clients \(e.g. shell\) will not be able to find this ZK quorum.
 
+$ ./bin/zkServer.sh  stop
 
+2017-08-13 12:31:51,926 ERROR \[main\] zookeeper.RecoverableZooKeeper: ZooKeeper exists failed after 4 attempts
+
+2017-08-13 12:31:51,927 WARN  \[main\] zookeeper.ZKUtil: hconnection-0x533116810x0, quorum=localost:2183, baseZNode=/hbase Unable to set watcher on znode \(/hbase/hbaseid\)
 
